@@ -7,7 +7,7 @@ public class UserService {
   public List<User> getAll() {
     List<User> data = new ArrayList<User>();
     for (int i = 0; i < 10; i++) {
-      User u = new User("Edoo ", i + 1);
+      User u = new User("William ", i + 1);
       data.add(u);
     }
     return data;
