@@ -1,4 +1,4 @@
-package com.williamk19.integrativeProg;
+package com.williamk19.integrativeProg.Bean;
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
