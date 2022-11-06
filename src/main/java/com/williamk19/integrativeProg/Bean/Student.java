@@ -12,20 +12,20 @@ public class Student {
   private int id;
   private String firstName;
   private String lastName;
-  private String studyProgram;
-  private String faculty;
+  private String classCode;
+  private String facultyCode;
   private String email;
   private LocalDate dateOfBirth;
 
   public Student() {
   }
 
-  public Student(int id, String firstName, String lastName, String studyProgram, String faculty, String email, LocalDate dateOfBirth) {
+  public Student(int id, String firstName, String lastName, String classCode, String facultyCode, String email, LocalDate dateOfBirth) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.studyProgram = studyProgram;
-    this.faculty = faculty;
+    this.classCode = classCode;
+    this.facultyCode = facultyCode;
     this.email = email;
     this.dateOfBirth = dateOfBirth;
   }
@@ -54,20 +54,20 @@ public class Student {
     this.lastName = lastName;
   }
 
-  public String getStudyProgram() {
-    return studyProgram;
+  public String getClassCode() {
+    return classCode;
   }
 
-  public void setStudyProgram(String studyProgram) {
-    this.studyProgram = studyProgram;
+  public void setClassCode(String classCode) {
+    this.classCode = classCode;
   }
 
-  public String getFaculty() {
-    return faculty;
+  public String getFacultyCode() {
+    return facultyCode;
   }
 
-  public void setFaculty(String faculty) {
-    this.faculty = faculty;
+  public void setFacultyCode(String facultyCode) {
+    this.facultyCode = facultyCode;
   }
 
   public String getEmail() {
@@ -92,8 +92,8 @@ public class Student {
             "id=" + id +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
-            ", studyProgram='" + studyProgram + '\'' +
-            ", faculty='" + faculty + '\'' +
+            ", studyProgram='" + classCode + '\'' +
+            ", faculty='" + facultyCode + '\'' +
             ", email='" + email + '\'' +
             ", dateOfBirth='" + dateOfBirth + '\'' +
             '}';
