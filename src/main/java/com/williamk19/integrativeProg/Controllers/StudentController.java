@@ -8,6 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
+
 
 @CrossOrigin
 @RestController
@@ -18,19 +21,25 @@ public class StudentController {
 
   @CrossOrigin
   @GetMapping("/all")
-  public @ResponseBody Iterable<Student> getAllStudents() {
+  public List<Student> getAllStudents() {
     return studentRepository.findAll();
   }
 
   @CrossOrigin
   @PostMapping("/add")
-  public @ResponseBody Student addStudent(@RequestBody Student s) {
+  public Student addStudent(@RequestBody Student s) {
     return studentRepository.save(s);
   }
 
   @CrossOrigin
-  @GetMapping("/test")
-  public ResponseEntity<String> test() {
-    return new ResponseEntity("Hello", HttpStatus.OK);
+  @DeleteMapping("/delete/{id}")
+  public void deleteStudent(@PathVariable int id) {
+    studentRepository.deleteById(id);
+  }
+
+  @CrossOrigin
+  @GetMapping("/{id}")
+  public Optional<Student> getStudent(@PathVariable int id) {
+    return studentRepository.findById(id);
   }
 }
